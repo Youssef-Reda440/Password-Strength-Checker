@@ -7,13 +7,13 @@ def get_password() -> str:
 
     while True:
         password = input("Enter your password: ")
-        is_valid, error = validate_input(password)
+        is_valid, error = _validate_input(password)
         if is_valid:
             return password
         
         print(f"[!] {error}\n")
         
-def validate_input(password: str) -> tuple[bool, str | None]:
+def _validate_input(password: str) -> tuple[bool, str | None]:
     """
     Validate the user's password.
     Args:

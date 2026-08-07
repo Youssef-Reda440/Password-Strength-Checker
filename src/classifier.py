@@ -11,8 +11,8 @@ def classify_strength(score: int) -> str:
     Classify the password based on its score.
     """
 
-    for category, minimum, maximum in STRENGTH_CATEGORIES:
+    for strength, minimum, maximum in STRENGTH_CATEGORIES:
         if minimum <= score < maximum:
-            return category
+            return strength
 
     raise ValueError("Invalid password score.")
